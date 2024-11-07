@@ -1,0 +1,18 @@
+# Ignore node_modules folder
+node_modules/
+
+# Ignore logs
+logs
+*.log
+npm-debug.log*
+
+# Ignore environment files
+.env
+
+# Ignore OS specific files
+.DS_Store
+Thumbs.db
+
+# Ignore build files (optional, if you have these)
+dist/
+build/

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/login.css">
+    <title>Log In</title>
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="login-title">LOG IN</h1>
+        
+        <!-- Display error message if present -->
+        {{#if error}}
+            <p class="error-message">{{error}}</p>
+        {{/if}}
+
+        <form action="/login" method="POST">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        
+        <a href="/signup" class="signup-link">Make a new Account</a>
+    </div>
+</body>
+</html>
